@@ -1,4 +1,10 @@
 package sda.org.sklep;
 
-public class Product {
+public abstract class Product {
+
+    private String productName;
+    private int productId;
+    private Enum <Amount> amount;
+
+
 }
