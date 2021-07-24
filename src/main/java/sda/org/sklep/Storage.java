@@ -1,4 +1,6 @@
 package sda.org.sklep;
 
-public class AddGoods {
+public class Storage {
+
+
 }
