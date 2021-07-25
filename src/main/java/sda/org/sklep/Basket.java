@@ -36,7 +36,8 @@ public class Basket implements Operation{
 
     @Override
     public void listOfProducts() {
-        System.out.println("List of products: \n" + productList);
+        System.out.println("List of products in your basket: \n");
+        productList.forEach(x-> System.out.println(x));
 
     }
 }
