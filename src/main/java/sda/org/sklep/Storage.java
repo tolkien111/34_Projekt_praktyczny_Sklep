@@ -12,10 +12,11 @@ public class Storage implements Operation {
 
     List<Product> products = new ArrayList<>();
 
-    public Product isItCountable (Product product){
-        if (product.getKindOfAmount().equals(KindOfAmount.KG)){
+    public Product isItCountable (Product product) {
+        if (product.getKindOfAmount().equals(KindOfAmount.KG)) {
 
         }
+        return null;
     }
 
     @Override

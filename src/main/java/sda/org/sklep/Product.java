@@ -11,10 +11,20 @@ public class Product {
 
     private String productName;
     private int productId;
-    private Enum <KindOfAmount> kindOfAmount;
+    private KindOfAmount kindOfAmount;
+    private int amountInPieces;
+    private double amountInKilograms;
     private double price;
 
-    public Product(String productName, int productId, Enum<KindOfAmount> kindOfAmount, double price) {
+    public Product(String productName, int productId,KindOfAmount kindOfAmount, String amount, double price) {
+        //na podstawie stringa parsujemy do liczby która nas interesuje (double albo int)
+        if (kindOfAmount == KindOfAmount.KG){
+           amountInKilograms = Double.parseDouble(amount);
+        } else if (kindOfAmount == KindOfAmount.PIECES){
+            amountInPieces = Integer.parseInt(amount);
+        } else {
+            System.out.println("Put correct kind of amout");
+        }
         this.productName = productName;
         this.productId = productId;
         this.kindOfAmount = kindOfAmount;
@@ -39,7 +49,10 @@ public class Product {
         return "Product{" +
                 "productName='" + productName + '\'' +
                 ", productId=" + productId +
-                ", amount=" + kindOfAmount +
+                ", kindOfAmount=" + kindOfAmount +
+                ", amountInPieces=" + amountInPieces +
+                ", amountInKilograms=" + amountInKilograms +
+                ", price=" + price +
                 '}';
     }
 }
