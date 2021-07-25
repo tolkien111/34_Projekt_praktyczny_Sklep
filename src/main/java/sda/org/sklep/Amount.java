@@ -1,6 +1,6 @@
 package sda.org.sklep;
 
 public enum Amount {
-    KG,
-    PIECES,
+   KG,
+   PIECES,
 }

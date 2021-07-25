@@ -16,12 +16,14 @@ package sda.org.sklep;
 
 import java.util.Scanner;
 
+import java.util.Scanner;
+
 public class ShopApp {
 
     public static void main(String[] args) {
 
-
         Storage storage = new Storage();
+
         ShopAppDemo.menu();
         Scanner scanner = new Scanner(System.in);
         int i = scanner.nextInt();

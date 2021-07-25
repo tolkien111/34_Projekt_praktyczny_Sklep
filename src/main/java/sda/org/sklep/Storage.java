@@ -36,7 +36,4 @@ public class Storage implements Operation {
         System.out.println("List of products: \n" + products);
     }
 
-
-
-
 }
