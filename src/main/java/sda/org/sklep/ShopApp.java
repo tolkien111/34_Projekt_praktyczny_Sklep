@@ -11,6 +11,9 @@ package sda.org.sklep;
  - Ewidencji zakupów - czyli w ramach wejścia do sklepu ktoś robi swoje zakupy, ma się to odbić na ilości dostępnego towaru
  */
 
+
+
+
 import java.util.Scanner;
 
 public class ShopApp {
@@ -18,18 +21,36 @@ public class ShopApp {
     public static void main(String[] args) {
 
 
-        System.out.println("Shop menu, choose what do you want to do: ");
-
-        System.out.println("Chose 1 to view products");
-        System.out.println("Chose 2 to add products");
-        System.out.println("Chose 3 to remove products");
-        System.out.println("Chose 1 to ");
-        System.out.println("Chose 1 to view products");
+        Storage storage = new Storage();
+        ShopAppDemo.menu();
         Scanner scanner = new Scanner(System.in);
         int i = scanner.nextInt();
-        switch (i){
-            case 1:
 
+        switch (i) {
+
+            case 1:
+                ShopAppDemo.list();
+                storage.listOfProducts();
+                break;
+            case 2:
+                ShopAppDemo.choice();
+                storage.listOfProducts();
+                // tutaj ładujemy liste produktow
+                int add_productId = scanner.nextInt();
+
+                // dodajemy produkt do koszyka
+                break;
+            case 3:
+                ShopAppDemo.choice();
+                // tutaj ładujemy liste produktów
+                int remove_productId = scanner.nextInt();
+                // usuwamy produkt z koszyka
+                break;
+            case 4:
+                // idziemy do kasy
+                break;
         }
+
+
     }
 }
