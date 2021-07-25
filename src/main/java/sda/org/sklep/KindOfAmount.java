@@ -1,6 +1,6 @@
 package sda.org.sklep;
 
-public enum Amount {
+public enum KindOfAmount {
    KG,
    PIECES,
 }

@@ -1,7 +1,7 @@
 package sda.org.sklep;
 
 import lombok.Getter;
-import lombok.Setter;
+
 
 import java.util.Objects;
 
@@ -11,13 +11,13 @@ public class Product {
 
     private String productName;
     private int productId;
-    private Enum <Amount> amount;
+    private Enum <KindOfAmount> kindOfAmount;
     private double price;
 
-    public Product(String productName, int productId, Enum<Amount> amount, double price) {
+    public Product(String productName, int productId, Enum<KindOfAmount> kindOfAmount, double price) {
         this.productName = productName;
         this.productId = productId;
-        this.amount = amount;
+        this.kindOfAmount = kindOfAmount;
         this.price = price;
     }
 
@@ -26,12 +26,12 @@ public class Product {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Product product = (Product) o;
-        return productId == product.productId && Objects.equals(productName, product.productName) && Objects.equals(amount, product.amount);
+        return productId == product.productId && Objects.equals(productName, product.productName) && Objects.equals(kindOfAmount, product.kindOfAmount);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(productName, productId, amount);
+        return Objects.hash(productName, productId, kindOfAmount);
     }
 
     @Override
@@ -39,7 +39,7 @@ public class Product {
         return "Product{" +
                 "productName='" + productName + '\'' +
                 ", productId=" + productId +
-                ", amount=" + amount +
+                ", amount=" + kindOfAmount +
                 '}';
     }
 }
